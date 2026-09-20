@@ -23,9 +23,9 @@
 
 ```bash
 # 1. 安装依赖（任选其一）
-pip install pygame
+pip install -r requirements.txt
 # 或
-python -m pip install pygame
+pip install pygame
 
 # 2. 运行游戏
 python 1.py
@@ -38,6 +38,13 @@ python 1.py --solve    # 校验全部关卡是否必定可通关，并打印通�
 python 1.py --test     # 自测核心规则（路径检测 / 胜负判定 / 状态机）
 python 1.py --help     # 查看完整说明
 ```
+
+## 运行所需的资源文件
+
+- **游戏本体不依赖任何外部素材**：棋盘、箭头、心形失误图标、虚线网格全部由代码用 `pygame.draw` 现画，程序不会读取图片或音频文件。
+- 中文界面直接调用**系统字体**（优先 `C:\Windows\Fonts\msyh.ttc` 微软雅黑），并按「字体文件 → 系统字体库 → pygame 内置字体」三级回退，因此无需随程序分发字体文件。
+- 仓库中的 `screenshots/` 仅用于本 README 的截图展示与试玩演示，**不是程序运行所必需的资源**。
+- 唯一的第三方依赖 pygame 记录在 `requirements.txt` 中。
 
 ## 游戏操作说明
 
